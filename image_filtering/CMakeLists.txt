@@ -7,15 +7,17 @@ project(image_filtering)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
+# set(OpenCV_DIR /home/jgl/Dependencies/opencv-3.4.15/install/share/OpenCV)
+find_package(OpenCV REQUIRED)
+
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   sensor_msgs
   std_msgs
+  cv_bridge
 )
 
-set(OpenCV_DIR /home/jgl/Dependencies/opencv-3.4.15/install/share/OpenCV)
-find_package(OpenCV 3.4.15 REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
